@@ -247,7 +247,7 @@ public class ActivityMusic extends AppCompatActivity {
             mReverbPresetNames[i] = getString(mReverbPresetRSids[i]);
         }
         mCurrentLevelText = (TextView)findViewById(R.id.switchstatus);
-        mCurrentLevelText.setCompoundDrawableTintList(new ColorStateList(new int[][] { new int[0] }, new int[] { getResources().getColor(R.color.current_level_color) }));
+        mCurrentLevelText.setCompoundDrawableTintList(new ColorStateList(new int[][] { new int[0] }, new int[] { getResources().getColor(R.color.current_out_source_color) }));
 
         // Watch for button clicks and initialization.
         if ((mVirtualizerSupported) || (mBassBoostSupported) || (mEqualizerSupported)
@@ -541,6 +541,7 @@ public class ActivityMusic extends AppCompatActivity {
             }
         });
         spinner.setSelection(mPRPreset);
+        spinner.setBackgroundResource(R.drawable.rev_spinner);
     }
 
     private void equalizerPresetsInit() {
@@ -660,6 +661,7 @@ public class ActivityMusic extends AppCompatActivity {
                 }
             });
         }
+        ill.setBackgroundResource(R.drawable.knobs_area);
     }
 
     /**
